@@ -1,16 +1,10 @@
-from datetime import datetime, timedelta
-
-# Função para calcular a data de devolução com base na data atual e no prazo em dias
-def calcular_data_devolucao(prazo_dias):
-    data_atual = datetime.now()
-    prazo = timedelta(days=prazo_dias)
-    data_devolucao = data_atual + prazo
-    return data_devolucao
-
-# Exemplo de uso da função para calcular a data de devolução com prazo de 7 dias
-prazo_devolucao = int(input('Por quanto tempo você deseja alugar o veículo(a partir da data atual)? '))
-data_devolucao = calcular_data_devolucao(prazo_devolucao)
-
-print("Data atual:", datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-print(f"Prazo de devolução: {prazo_devolucao} dias")
-print("Data de devolução esperada:", data_devolucao.strftime("%Y-%m-%d %H:%M:%S"))
+def cabeçalho():
+    print('''\033[1;33m
+    <=><=><=><=><=><=>\033[m
+    |    \033[1;32mCar.Rent\033[m    |
+    \033[1;33m<=><=><=><=><=><=>\033[m
+    Modelos e tabela de preços:
+    1 - Renault "Duster" (R$ 23,00 p/dia)
+    2 - Fiat "Uno" (R$ 15,00 p/dia)
+    3 - Chevrollet "Silverado" (R$ 20,00 p/dia)
+    Qual deseja ecolher? ''', end='')
