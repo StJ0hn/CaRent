@@ -1,5 +1,6 @@
-from funcionalidades import cabeçalho
+from funcionalidades import ddevo_e_custo
+from datetime import datetime, timedelta
 
 
-cabeçalho()
-int(input())
+
+data_devolucao = ddevo_e_custo()
